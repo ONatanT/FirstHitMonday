@@ -5,7 +5,7 @@ import android.graphics.Path;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 
-public class CircleImageView extends androidx.appcompat.widget.AppCompatImageView{
+public class CircleImageView extends androidx.appcompat.widget.AppCompatImageView {
 
         public static float radius = 18.0f;
         public static float margin = 0.0f;
