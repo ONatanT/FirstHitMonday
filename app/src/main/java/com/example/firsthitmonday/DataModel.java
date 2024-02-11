@@ -6,6 +6,7 @@ public class DataModel {
     private String version;
     private int id_;
     private int image;
+    private String text;
 
     public DataModel(String name, String version, int id_, int image) {
         this.name = name;
@@ -41,4 +42,9 @@ public class DataModel {
     public void setImage(int image) {
         this.image = image;
     }
+
+    public String getText() {
+        return text;
+    }
+
 }
