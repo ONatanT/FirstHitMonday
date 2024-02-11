@@ -20,7 +20,16 @@
             android:layout_height="match_parent"
             android:onClick="SearchAlgo"
             android:text="Search"
+            android:layout_centerHorizontal="true"
             android:textSize="20dp" />
+        <EditText
+            android:id="@+id/search_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_button"
+            android:layout_marginTop="16dp"
+            android:hint="Enter your search"
+            android:visibility="gone" />
     </LinearLayout>
 
 
