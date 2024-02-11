@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.res);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
+        dataSet = new ArrayList<>();
 
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
             dataSet.add(new DataModel(
                     MyData.nameArray[i],
-                    MyData.versionArray[i],
+                    MyData.textArray[i],
                     MyData.id_[i],
                     MyData.drawableArray[i]
             ));
