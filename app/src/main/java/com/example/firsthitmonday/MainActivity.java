@@ -6,9 +6,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -20,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<DataModel> dataSet;
 
     private CustomeAdapter adapter;
+    private SearchAlgo searchAlgo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
