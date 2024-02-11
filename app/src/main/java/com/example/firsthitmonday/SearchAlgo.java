@@ -19,7 +19,7 @@ public class SearchAlgo extends AppCompatActivity{
         setContentView(R.layout.activity_main);
 
         searchEditText = findViewById(R.id.search_edit_text);
-        // Set click listener for the show search button
+
         showSearchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
