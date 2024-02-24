@@ -1,10 +1,12 @@
 package com.example.firsthitmonday;
 
+import android.app.Dialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,6 +18,7 @@ import java.util.ArrayList;
 public class CustomeAdapter extends RecyclerView.Adapter<CustomeAdapter.MyViewHolder> {
 
     ArrayList<DataModel> dataset;
+    Dialog myDialog;
     public CustomeAdapter(ArrayList<DataModel> dataSet) {
         this.dataset = dataSet;
     }
@@ -43,6 +46,22 @@ public class CustomeAdapter extends RecyclerView.Adapter<CustomeAdapter.MyViewHo
 
         MyViewHolder myViewHolder = new MyViewHolder(view);
 
+        myDialog = new Dialog(view.getContext());
+        myDialog.setContentView(R.layout.popup_character);
+
+
+        myViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                TextView dialog_name = (TextView) myDialog.findViewById(R.id.dialog_name_id);
+                ImageView dialog_image = (ImageView) myDialog.findViewById(R.id.dialog_imageview_id);
+                dialog_name.setText(dataset.get(myViewHolder.getAdapterPosition()).getName());
+                dialog_image.setImageResource(dataset.get(myViewHolder.getAdapterPosition()).getImage());
+                myDialog.show();
+
+            }
+        });
+
         return myViewHolder;
     }
 
@@ -56,6 +75,7 @@ public class CustomeAdapter extends RecyclerView.Adapter<CustomeAdapter.MyViewHo
         textViewName.setText(dataset.get(position).getName());
         textViewVersion.setText((dataset.get(position).getVersion()));
         imageView.setImageResource(dataset.get(position).getImage());
+
 
     }
 
